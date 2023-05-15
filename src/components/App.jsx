@@ -12,7 +12,6 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-
   const leaveFeedback = e => {
     // console.log(e.target.name);
     switch (e.target.name) {
@@ -33,7 +32,7 @@ export const App = () => {
   const countTotalFeedback = () => {
     console.log('countTotalFeedback: ', good + neutral + bad);
     return good + neutral + bad;
-  }
+  };
 
   const countPositiveFeedbackPercentage = () => {
     console.log(
@@ -41,8 +40,7 @@ export const App = () => {
       Math.round((good * 100) / countTotalFeedback() || 0)
     );
     return Math.round((good * 100) / countTotalFeedback() || 0);
-  }
- 
+  };
 
   return (
     <StyledAppWrap>
@@ -64,4 +62,3 @@ export const App = () => {
     </StyledAppWrap>
   );
 };
-
